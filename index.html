@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="icon" href="icon.jpg" type="image/jpeg">
+</head>
+<body>
+    <div id="preloader">
+       
+    </div>
+    
+    
+    <!-- Navbar -->
+    <nav>
+        <h1 id="astralis">
+    &lt;/Astralis&gt;
+           <span class="meaning">
+               Astralis represents a star, a symbol of guidance and excellence. It's also my chosen 
+               name to reflect my identity in the tech world. 
+           </span> 
+        </h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+           
+            <li><a href="project.html">Projects</a></li>
+       
+        </ul>
+    </nav>
+
+    <!-- Hi, I'm Nour Section -->
+    <section id="hiNour">
+        <div id="text">           
+            <h2 id="typed-text"></h2>
+            <p id="web-developer">Web Developer</p>
+
+            <div id="passionText"><hr> I'm passionate about exploring the world of coding .</div>
+        </div>
+        <img src="logo.jpg" alt="Image" class="profileImage">
+    </section>
+
+    <!-- About Me Section -->
+    <section id="aboutme">
+        <h2 class="about-contact-heading">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+            <span>&nbsp;</span>
+            <span>M</span>
+            <span>e</span>
+              
+        </h2>
+       
+        <div class="aboutmeContent">
+            <img src="about.jpg" alt="About Me Image" class="aboutImage">
+            <div class="description">
+                <p>A passionate web developer and problem solver. I enjoy turning ideas 
+                    into code and creating engaging user experiences. With skills in HTML, CSS, 
+                    JavaScript, and Python, I thrive on challenges and continuous learning.</p></div>
+                <div class="button-container">
+                <button class="custom-button"><a href="about.html">Hire Me</a></button>
+            </div>
+        </div>
+        <div id="star"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="animated-heading">
+            <span>M</span>
+            <span>y</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>k</span>
+            <span>i</span>
+            <span>l</span>
+            <span>l</span>
+            <span>s</span>
+        </h2>
+        <table id="skills-table">
+            <tr>
+               
+                <td>JavaScript</td>
+                <td class="circle-container"><div class="circle green"></div><div class="circle"></div>
+                    <div class="circle"></div><div class="circle"></div><div class="circle"></div></td>
+            </tr>
+            <tr>
+               
+                <td>Python</td>
+                <td class="circle-container"><div class="circle green"></div>
+                    <div class="circle green"></div><div class="circle"></div><div class="circle"></div>
+                    <div class="circle"></div></td>
+            </tr>
+            <tr>
+           
+                <td>CSS</td>
+                <td class="circle-container"><div class="circle green"></div><div class="circle green"></div>
+                    <div class="circle green"></div><div class="circle"></div><div class="circle"></div></td>
+            </tr>
+            <tr>
+               
+                <td>HTML</td>
+                <td class="circle-container"><div class="circle green"></div><div class="circle green"></div>
+                    <div class="circle green"></div><div class="circle green"></div><div class="circle"></div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="animated-heading">
+            <span>M</span>
+            <span>y</span>
+            <span>&nbsp;</span>
+            <span>P</span>
+            <span>r</span>
+            <span>o</span>
+            <span>j</span>
+            <span>e</span>
+            <span>c</span>
+            <span>t</span>
+            <span>s</span>
+        </h2>
+        <div class="projects-wrapper">
+        <div class="projects-container">
+            <div class="project-circle"><img src="space.jpg" alt="Project 1">
+                                        <p class="hover-text">Do You</p>
+            </div>
+            <div class="project-circle"><img src="coding.jpg" alt="Project 2">
+            <p class="hover-text">Know What</p></div>
+            <div class="project-circle"><img src="cheery-blossom.jpg" alt="Project 3">
+            <p class="hover-text">These Images</p></div>
+            <div class="project-circle"><img src="web-design.png" alt="Project 4">
+            <p class="hover-text">Represents?</p></div>
+           </div>
+        </div>
+        <div class="arrow-container">
+            <p class="press-down">&lt;Press Down&gt;</p>
+            <div class="moving-arrow">⬇</div>   
+          <button class="custom-button"><a href="project.html">Projects Links</a>
+        </button>
+       </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="text">
+            <h2 class="about-contact-heading">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>C</span>
+                <span>o</span>
+                <span>n</span>
+                <span>t</span>
+                <span>a</span>
+                <span>c</span>
+                <span>t</span>
+            </h2>
+            <p class="free">Feel free to get in touch with me.</p>
+        </div>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+  
+    <script src="script.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        })
+     </script>
+   
+</body>
+</html>

@@ -1,0 +1,822 @@
+#preloader {
+    background: #000 url(loader.gif) no-repeat center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover {
+color: #32cd32;
+text-transform: uppercase;
+letter-spacing: 2px;
+transform: scale(1.1);
+}
+
+
+
+#hiNour  {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 50px;
+   background-color: #222;
+   color: white;
+}
+#hiNour .text {
+    text-align: left;
+}
+
+#typed-text {
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    color: lightgrey;
+    text-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid lightgray;
+    display: inline-block;
+    animation: typing 4s steps(12) 1s 1 normal both, blink 0.7s step-end infinite;
+    margin-bottom: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16ch;
+    }
+}
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: lightgrey;
+    }
+}
+
+#web-developer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #45a049;
+    padding: 1rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+#passionText  {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 0s ease 1s;
+    font-size: 1.5rem;
+    color: #6b6e70;
+    margin-top: 10px;
+}
+
+.profileImage {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+#aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #222;
+    color: #ccc;
+}
+#skills, #projects, #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #222;
+    color: whitesmoke;
+}
+
+#aboutme h2, #skills h2, #projects h2, #contact h2 {
+    font-size: 30px;
+    color: #4CAF50;
+    
+}
+
+#aboutme .content, #skills .content, #projects .content, #contact .content {
+    text-align: center;
+}
+
+#aboutme img, #skills img, #projects img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+
+  
+   
+
+.aboutmeContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.aboutImage {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+.description {
+    width: 50%;
+   
+}
+
+
+
+#skills-table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#skills-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+#skills-table td i {
+    font-size: 15px;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.highlight-row {
+    background-color: #6b6e70;
+    transition: background-color 0.5s;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #ccc;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.projects-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   justify-content: center;
+    gap: 20px;
+}
+
+.project-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+.project-circle:hover img {
+    transform: scale(1.1);
+    filter: brightness(30%);
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.project-circle:hover .hover-text {
+    opacity: 1;
+}
+.project-circle:hover {
+    transform: scale(1.05);
+}
+
+.arrow-container {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+.press-down {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: oblique;
+    color: #6b6e70;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+.moving-arrow {
+   font-size: 30px;
+   color: #4CAF50;
+   animation: move-down 1s infinite;
+   margin-bottom: 40px;
+}
+@keyframes move-down {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.custom-button {
+    background-color: #007bff;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
+#contact form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+/* Styles for Astralis */
+#astralis {
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    animation: colorShift 3s infinite alternate;
+}
+
+/* Animation for color flow */
+@keyframes colorShift {
+    0% {
+        color: #66ff66;
+    }
+    50% {
+        color: #32cd32;
+    }
+    100% {
+        color: #228b22;
+    }
+}
+.meaning {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #6b6e70;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    animation: colorJump 3s forwards;
+}
+
+#astralis:hover  .meaning {
+    display: block;
+}
+
+@keyframes colorJump {
+    0% {
+        color: white;
+    }
+    10% {
+        color: #66ff66;
+    }
+    20% {
+        color: white;
+    }
+    30% {
+        color: #66ff66;
+    }
+    40% {
+        color: white;
+    }
+    50% {
+        color: #66ff66;
+    }
+    60% {
+        color: white;
+    }
+    70% {
+        color: #66ff66;
+    }
+    80% {
+        color: #66ff66;
+    }
+    100% {
+        color: white;
+    }
+}
+
+#aboutme {
+    position: relative;
+    width: 50;
+  
+    border: 2px solid #333; /* Optional: to make the section's boundaries visible */
+    padding: 60px;
+    overflow: hidden; /* Prevents the star from spilling out */
+  }
+  
+  #star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #66ff66; /* Or any color you prefer */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Optional: makes the shape look like a star */
+    border-radius: 50%;
+    top: 10%; /* Start position - this will be dynamically adjusted */
+    left: 10%; /* Start position - this will be dynamically adjusted */
+    transform: translate(-50%, -50%); /* Center the star */
+    animation: moveStar 30s linear infinite;
+  }
+  
+  /* Keyframe animation to make the star move around the section */
+  @keyframes moveStar {
+    0% {
+      top: 0%;
+      left: 0%; /* Starting point at the 'E' in 'me' */
+    }
+    25% {
+      top: 0%;
+      left: 100%;
+    }
+    50% {
+      top: 100%;
+      left: 100%;
+    }
+    75% {
+      top: 100%;
+      left: 0%;
+    }
+    100% {
+      top: 0%;
+      left: 0%;
+    }
+  }
+
+  .button-container {
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  
+  /* Button styling with glowing light effect */
+  .custom-button, .custom-button a {
+    position: relative;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 255, 0, 0.8); /* Green border */
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6), 0 0 20px rgba(0, 255, 0, 0.4); 
+    text-decoration: none;
+    align-items: center;
+    
+  }
+  
+  /* Creative word styling */
+  .custom-button::after, .custom-button a::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    transform: scale(1.3);
+    font-style: italic;
+   
+  }
+  
+  /* Hover effect */
+  .custom-button:hover, .custom-button a:hover {
+    background: rgba(0, 255, 0, 0.2); /* Light green glow inside */
+    box-shadow: 0 0 30px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 0.8); /* Stronger glow */
+    transform: scale(1.1); /* Slightly enlarges */
+  }
+  
+  /* Light pulse animation */
+  .custom-button::before, .custom-button a::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid rgba(0, 255, 0, 0.5);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.4);
+    z-index: -1;
+    animation: pulse 2s infinite;
+  }
+  
+  /* Pulse animation keyframes */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.6;
+    }
+  }
+  /* Wrap each letter in a span tag */
+.animated-heading {
+    display: inline-block;
+    text-shadow:  2px 2px 5px gray;
+  }
+  
+  .animated-heading span {
+    display: inline-block;
+    animation: moveUpDown 1s ease-in-out infinite; /* Animation for each letter */
+  }
+  
+  /* Animation for each letter */
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0); /* Start and end position (normal) */
+    }
+    50% {
+      transform: translateY(-10px); /* Move up */
+    }
+  }
+  
+  /* Delay each letter to create staggered effect */
+  .animated-heading span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .animated-heading span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .animated-heading span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .animated-heading span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .animated-heading span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+  .animated-heading span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  
+  .animated-heading span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  
+  .animated-heading span:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  
+  .animated-heading span:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  
+  .animated-heading span:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+  
+  .animated-heading span:nth-child(11) {
+    animation-delay: 1s;
+  }
+
+  /* Shared class for both About Me and Contact sections */
+.about-contact-heading {
+    display: inline-block;
+    text-shadow:  2px 2px 5px gray;
+  }
+  
+  .about-contact-heading span {
+    display: inline-block;
+    animation: moveSpacing 1.5s ease-in-out infinite; /* Animation for each letter */
+  }
+  
+  /* Animation for spacing effect */
+  @keyframes moveSpacing {
+    0%, 100% {
+      letter-spacing: normal; /* Default space */
+    }
+    50% {
+      letter-spacing: 10px; /* Increase the space between letters */
+    }
+  }
+  
+  /* Delay each letter to create staggered effect */
+  .about-contact-heading span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .about-contact-heading span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .about-contact-heading span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .about-contact-heading span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .about-contact-heading span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+  .about-contact-heading span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  
+  .about-contact-heading span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  
+  .about-contact-heading span:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+ 
+  .free {
+    font-size: 25px;
+    font-style: italic;
+    color: #6b6e70;
+  }
+  /*here is for about me page*/
+  /* About Me Section */
+/* General Styles */
+/* Basic Reset */
+/* About Me Page */
+#about {
+    padding: 40px;
+    background-color: #222;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me-container {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #228b22;
+    text-shadow: 2px 2px 5px gray;
+}
+
+.rectangle-box {
+    background-color: #6b6e70;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 60px;
+}
+.rectangle-box:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+.about-me-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ecf0f1;
+}
+
+/* Message Section */
+.message-container {
+  
+    margin-top: 120px;
+   text-align: center;
+}
+.meaning-text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.message-text {
+    font-size: 2.1rem;
+    color: #4CAF50;
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+#message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Carousel Container */
+#carousel-event {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+     padding: 0;
+}
+.carousel-container {
+   position: relative;
+   text-align: center;
+   padding: 20px;
+   max-width: 800px;
+   margin: 0 auto;
+   border: 2px solid #66ff66;
+   border-radius: 10px;
+   background-color: #6b6e70;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide All Slides Initially */
+.carousel-slide {
+    display: none;
+    padding: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/* Buttons inside Carousel */
+.option-btn {
+   padding: 10px 20px;
+   background-color: #4CAF50;
+   color: #ccc;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+.option-btn:hover {
+    background-color: #222;
+}
+
+.inspiring-message {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ccc;
+    margin-top: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 70px;
+}
+.card {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+   width: 100%;
+   height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 15px;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #228b22;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 1rem;
+    color: #6b6e70;
+    margin-bottom: 15px;
+}
